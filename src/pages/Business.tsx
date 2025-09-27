@@ -5,6 +5,15 @@ import { useNavigate } from "react-router-dom";
 const Business = () => {
   const navigate = useNavigate();
 
+  const handleBackClick = () => {
+    // Check if user came from within the app
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
@@ -12,10 +21,10 @@ const Business = () => {
         <Button
           variant="ghost"
           className="flex items-center gap-2 text-foreground hover:text-foreground/80"
-          onClick={() => navigate('/')}
+          onClick={handleBackClick}
         >
           <ArrowLeft className="h-5 w-5" />
-          Back to Home
+          Back to Previous Page
         </Button>
       </header>
 
@@ -106,10 +115,10 @@ const Business = () => {
 
           {/* Back to Home Button */}
           <Button
-            onClick={() => navigate('/')}
+            onClick={handleBackClick}
             className="bg-skawsh-blue text-white hover:bg-skawsh-blue/90 px-6 md:px-8 py-3 text-base md:text-lg font-medium w-full sm:w-auto"
           >
-            Back to Home
+            Back to Previous Page
           </Button>
         </div>
       </main>

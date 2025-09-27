@@ -4,18 +4,27 @@ import { Button } from "@/components/ui/button";
 
 const PrivacyPolicy = () => {
   const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    // Check if user came from within the app
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate('/');
+    }
+  };
   
   return (
     <div className="min-h-screen bg-white">
       <div className="bg-skawsh-blue text-white py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
-          <Link 
-            to="/" 
-            className="inline-flex items-center text-white/80 hover:text-white mb-4 md:mb-6 transition-colors text-sm md:text-base"
+          <button 
+            onClick={handleBackClick}
+            className="inline-flex items-center text-white/80 hover:text-white mb-4 md:mb-6 transition-colors text-sm md:text-base bg-transparent border-0 cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
-          </Link>
+          </button>
           <h1 className="text-2xl md:text-4xl font-bold">Privacy Policy</h1>
           <p className="text-base md:text-xl mt-2 text-white/90">Last updated: September 16, 2025</p>
         </div>
@@ -207,10 +216,10 @@ const PrivacyPolicy = () => {
 
           <div className="text-center mt-12">
             <Button 
-              onClick={() => navigate('/')} 
+              onClick={handleBackClick}
               className="bg-skawsh-blue hover:bg-skawsh-blue/90 text-white px-8 py-3"
             >
-              Back to Home
+              Back to Previous Page
             </Button>
           </div>
         </div>
