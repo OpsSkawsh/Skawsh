@@ -30,17 +30,17 @@ const Customer = () => {
           </p>
           
           {/* App Store Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-lg sm:max-w-none mx-auto">
             <Button
               asChild
               size="lg"
               variant="default"
-              className="bg-black text-white hover:bg-black/90 h-16 px-8 rounded-lg"
+              className="bg-black text-white hover:bg-black/90 h-14 sm:h-16 px-6 sm:px-8 rounded-lg w-full sm:w-auto"
             >
               <a href="#" className="flex items-center gap-3">
                 <div className="text-left">
                   <div className="text-xs opacity-80">Download on the</div>
-                  <div className="text-lg font-semibold">App Store</div>
+                  <div className="text-base sm:text-lg font-semibold">App Store</div>
                 </div>
               </a>
             </Button>
@@ -49,12 +49,12 @@ const Customer = () => {
               asChild
               size="lg"
               variant="default"
-              className="bg-black text-white hover:bg-black/90 h-16 px-8 rounded-lg"
+              className="bg-black text-white hover:bg-black/90 h-14 sm:h-16 px-6 sm:px-8 rounded-lg w-full sm:w-auto"
             >
               <a href="#" className="flex items-center gap-3">
                 <div className="text-left">
                   <div className="text-xs opacity-80">GET IT ON</div>
-                  <div className="text-lg font-semibold">Google Play</div>
+                  <div className="text-base sm:text-lg font-semibold">Google Play</div>
                 </div>
               </a>
             </Button>

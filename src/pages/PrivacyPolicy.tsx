@@ -7,42 +7,42 @@ const PrivacyPolicy = () => {
   
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-skawsh-blue text-white py-12">
-        <div className="max-w-4xl mx-auto px-4">
+      <div className="bg-skawsh-blue text-white py-8 md:py-12">
+        <div className="max-w-4xl mx-auto px-4 md:px-6">
           <Link 
             to="/" 
-            className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-white/80 hover:text-white mb-4 md:mb-6 transition-colors text-sm md:text-base"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
-          <h1 className="text-4xl font-bold">Privacy Policy</h1>
-          <p className="text-xl mt-2 text-white/90">Last updated: September 16, 2025</p>
+          <h1 className="text-2xl md:text-4xl font-bold">Privacy Policy</h1>
+          <p className="text-base md:text-xl mt-2 text-white/90">Last updated: September 16, 2025</p>
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg max-w-none">
-          <p className="text-lg text-gray-600 mb-8">
+      <div className="max-w-4xl mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div className="prose prose-sm md:prose-lg max-w-none">
+          <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
             This Privacy Policy explains how CS Wishlink Private Limited ("the Company", "We", "Us", or "Our") collects, uses, and protects your information when you use the Skawsh mobile application ("Application") and related services.
           </p>
           
-          <p className="mb-8">
+          <p className="mb-6 md:mb-8 text-sm md:text-base leading-relaxed">
             By using Skawsh, you agree to the terms of this Privacy Policy.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-6">1. Interpretation and Definitions</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">1. Interpretation and Definitions</h2>
           
-          <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4">Application</h3>
-          <p className="mb-6">
+          <h3 className="text-lg md:text-xl font-semibold text-gray-800 mt-6 md:mt-8 mb-3 md:mb-4">Application</h3>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
             Application refers to Skawsh, the mobile application developed and operated by the Company, available on Android and iOS devices.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4">Company</h3>
-          <p className="mb-4">
+          <h3 className="text-lg md:text-xl font-semibold text-gray-800 mt-6 md:mt-8 mb-3 md:mb-4">Company</h3>
+          <p className="mb-3 md:mb-4 text-sm md:text-base leading-relaxed">
             Company refers to CS Wishlink Private Limited, the parent company that owns and operates the Skawsh platform, with its registered office at:
           </p>
-          <address className="mb-6 text-gray-600 not-italic">
+          <address className="mb-4 md:mb-6 text-gray-600 not-italic text-sm md:text-base leading-relaxed">
             CS Wishlink Private Limited<br />
             5-497, Near Hitec City, Izzathnagar, Kondapur,<br />
             K.V. Rangareddy, Hyderabad – 500084, Telangana, India

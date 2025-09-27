@@ -16,11 +16,11 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl mb-12 opacity-80 max-w-3xl mx-auto">
           Turn laundry from a burden into freedom. Skawsh makes your clothes fresh, clean, and ready — while you focus on what really matters.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-lg sm:max-w-none mx-auto">
           <Button 
             size="lg" 
             variant="secondary"
-            className="bg-white text-skawsh-blue hover:bg-white/90 px-8 py-6 text-lg font-medium rounded-md"
+            className="bg-white text-skawsh-blue hover:bg-white/90 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium rounded-md w-full sm:w-auto"
             onClick={() => navigate('/customer')}
           >
             Get Started as Customer
@@ -28,7 +28,7 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             variant="secondary"
-            className="bg-white text-skawsh-blue hover:bg-white/90 px-8 py-6 text-lg font-medium rounded-md"
+            className="bg-white text-skawsh-blue hover:bg-white/90 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium rounded-md w-full sm:w-auto"
             onClick={() => navigate('/business')}
           >
             Join the Skawsh Network!

@@ -37,17 +37,17 @@ const Business = () => {
             </p>
             
             {/* App Store Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 md:mb-16 max-w-lg sm:max-w-none mx-auto">
               <Button
                 asChild
                 size="lg"
                 variant="default"
-                className="bg-black text-white hover:bg-black/90 h-16 px-8 rounded-lg"
+                className="bg-black text-white hover:bg-black/90 h-14 sm:h-16 px-6 sm:px-8 rounded-lg w-full sm:w-auto"
               >
                 <a href="#" className="flex items-center gap-3">
                   <div className="text-left">
                     <div className="text-xs opacity-80">Download on the</div>
-                    <div className="text-lg font-semibold">App Store</div>
+                    <div className="text-base sm:text-lg font-semibold">App Store</div>
                   </div>
                 </a>
               </Button>
@@ -56,12 +56,12 @@ const Business = () => {
                 asChild
                 size="lg"
                 variant="default"
-                className="bg-black text-white hover:bg-black/90 h-16 px-8 rounded-lg"
+                className="bg-black text-white hover:bg-black/90 h-14 sm:h-16 px-6 sm:px-8 rounded-lg w-full sm:w-auto"
               >
                 <a href="#" className="flex items-center gap-3">
                   <div className="text-left">
                     <div className="text-xs opacity-80">GET IT ON</div>
-                    <div className="text-lg font-semibold">Google Play</div>
+                    <div className="text-base sm:text-lg font-semibold">Google Play</div>
                   </div>
                 </a>
               </Button>
@@ -69,36 +69,36 @@ const Business = () => {
           </div>
 
           {/* Features Section */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
             {/* Boost Orders */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-skawsh-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="h-8 w-8 text-white" />
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-skawsh-blue rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                <Zap className="h-7 w-7 md:h-8 md:w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-foreground">Boost Orders</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-foreground">Boost Orders</h3>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                 Connect with more customers in your area and increase your daily orders.
               </p>
             </div>
 
             {/* Trusted Network */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-skawsh-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="h-8 w-8 text-white" />
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-skawsh-blue rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                <Shield className="h-7 w-7 md:h-8 md:w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-foreground">Trusted Network</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-foreground">Trusted Network</h3>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                 Join a vetted community of professional laundry service providers.
               </p>
             </div>
 
             {/* Grow Revenue */}
-            <div className="text-center">
-              <div className="w-16 h-16 bg-skawsh-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <DollarSign className="h-8 w-8 text-white" />
+            <div className="text-center sm:col-span-2 md:col-span-1">
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-skawsh-blue rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                <DollarSign className="h-7 w-7 md:h-8 md:w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-foreground">Grow Revenue</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-foreground">Grow Revenue</h3>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                 Expand your business reach and maximize your earning potential.
               </p>
             </div>
@@ -107,7 +107,7 @@ const Business = () => {
           {/* Back to Home Button */}
           <Button
             onClick={() => navigate('/')}
-            className="bg-skawsh-blue text-white hover:bg-skawsh-blue/90 px-8 py-3 text-lg font-medium"
+            className="bg-skawsh-blue text-white hover:bg-skawsh-blue/90 px-6 md:px-8 py-3 text-base md:text-lg font-medium w-full sm:w-auto"
           >
             Back to Home
           </Button>
