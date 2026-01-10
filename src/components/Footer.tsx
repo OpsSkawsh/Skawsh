@@ -53,6 +53,11 @@ const Footer = () => {
                   Terms & Conditions
                 </Link>
               </li>
+              <li>
+                <Link to="/support" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base">
+                  Support
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
