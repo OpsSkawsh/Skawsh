@@ -64,7 +64,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 md:mt-12 pt-6 md:pt-8 text-center">
           <p className="text-gray-400 text-xs md:text-sm">
-            © 2024 Skawsh. All rights reserved. Laundry isn't luxury, it's life.
+            © 2024–2026 Skawsh (operated by CSWISHLINK PRIVATE LIMITED). All rights reserved.
           </p>
         </div>
       </div>
