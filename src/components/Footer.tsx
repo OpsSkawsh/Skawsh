@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AppStoreButtons } from "@/components/AppStoreButtons";
 
 const Footer = () => {
   return (
@@ -11,22 +12,7 @@ const Footer = () => {
             <p className="text-gray-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
               Making laundry simple, reliable, and essential for everyday life.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 md:space-x-4">
-              <a 
-                href="#" 
-                className="inline-block bg-black rounded-lg px-3 py-2 border border-gray-600 hover:border-gray-400 transition-colors text-center text-sm"
-              >
-                <div className="text-xs">Download on the</div>
-                <div className="text-sm font-semibold">App Store</div>
-              </a>
-              <a 
-                href="#" 
-                className="inline-block bg-black rounded-lg px-3 py-2 border border-gray-600 hover:border-gray-400 transition-colors text-center text-sm"
-              >
-                <div className="text-xs">Get it on</div>
-                <div className="text-sm font-semibold">Google Play</div>
-              </a>
-            </div>
+            <AppStoreButtons size="small" />
           </div>
 
           {/* Support */}
