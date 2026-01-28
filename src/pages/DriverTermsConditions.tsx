@@ -1,103 +1,164 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 
 const DriverTermsConditions = () => {
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate('/drivers');
+    }
+  };
+
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      {/* Header */}
-      <header className="bg-skawsh-dark text-white py-6 px-4 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto flex items-center gap-4">
-          <Link to="/drivers" className="hover:opacity-80 transition-opacity">
-            <ArrowLeft className="w-6 h-6" />
-          </Link>
-          <Link to="/" className="text-2xl font-bold text-skawsh-blue hover:opacity-80 transition-opacity">
-            Skawsh
-          </Link>
+    <div className="min-h-screen bg-white">
+      <div className="bg-skawsh-blue text-white py-8 md:py-12">
+        <div className="max-w-4xl mx-auto px-4 md:px-6">
+          <button 
+            onClick={handleBackClick}
+            className="inline-flex items-center text-white/80 hover:text-white mb-4 md:mb-6 transition-colors text-sm md:text-base bg-transparent border-0 cursor-pointer"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back
+          </button>
+          <h1 className="text-2xl md:text-4xl font-bold">Terms & Conditions for Skawsh Driver Application</h1>
+          <p className="text-base md:text-xl mt-2 text-white/90">Last updated: 28 January 2026</p>
         </div>
-      </header>
+      </div>
 
-      {/* Main Content */}
-      <main className="flex-grow py-8 md:py-12 px-4">
-        <article className="max-w-4xl mx-auto prose prose-gray prose-headings:text-skawsh-dark prose-h1:text-3xl md:prose-h1:text-4xl prose-h2:text-xl md:prose-h2:text-2xl prose-p:text-gray-700 prose-li:text-gray-700 max-w-none">
-          <h1>Terms & Conditions for Skawsh Driver Application</h1>
-          <p className="text-gray-500 text-sm">Last updated: 28 January 2026</p>
-
-          <p>
+      <div className="max-w-4xl mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div className="prose prose-sm md:prose-lg max-w-none">
+          <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
             These Terms & Conditions ("Terms") govern your access to and use of the Skawsh Driver Application (the "App"), operated by Cswishlink Pvt Ltd. By registering, accessing, or using the App, you agree to be bound by these Terms. If you do not agree, you must not use the App.
           </p>
 
-          <h2>1. Eligibility</h2>
-          <p>You must be at least 18 years old to register as a driver.</p>
-          <p>You must provide accurate and complete information during registration and verification.</p>
-          <p>Aadhaar verification is mandatory to access the App.</p>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">1. Eligibility</h2>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            You must be at least 18 years old to register as a driver.
+          </p>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            You must provide accurate and complete information during registration and verification.
+          </p>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Aadhaar verification is mandatory to access the App.
+          </p>
 
-          <h2>2. Driver Responsibilities</h2>
-          <p>As a Skawsh driver, you agree to:</p>
-          <ul>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">2. Driver Responsibilities</h2>
+          <p className="mb-3 md:mb-4 text-sm md:text-base leading-relaxed">As a Skawsh driver, you agree to:</p>
+          <ul className="list-disc pl-4 md:pl-6 mb-4 md:mb-6 space-y-2 text-sm md:text-base">
             <li>Accept and complete delivery tasks in a professional and timely manner</li>
             <li>Maintain accurate status updates for assigned orders</li>
             <li>Handle customer items with care and responsibility</li>
             <li>Follow all applicable local laws, traffic rules, and safety regulations</li>
           </ul>
-          <p>Skawsh reserves the right to suspend or terminate accounts for misconduct, fraud, or repeated service issues.</p>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Skawsh reserves the right to suspend or terminate accounts for misconduct, fraud, or repeated service issues.
+          </p>
 
-          <h2>3. Account & Verification</h2>
-          <p>Drivers are responsible for maintaining the confidentiality of their login credentials.</p>
-          <p>You are solely responsible for all activities conducted through your account.</p>
-          <p>Skawsh may re-verify your identity or documents at any time for compliance or safety reasons.</p>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">3. Account & Verification</h2>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Drivers are responsible for maintaining the confidentiality of their login credentials.
+          </p>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            You are solely responsible for all activities conducted through your account.
+          </p>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Skawsh may re-verify your identity or documents at any time for compliance or safety reasons.
+          </p>
 
-          <h2>4. Location Tracking</h2>
-          <p>The App uses foreground and background location access only during active delivery operations.</p>
-          <p>Location tracking is required to assign jobs, enable navigation, and track delivery progress.</p>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">4. Location Tracking</h2>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            The App uses foreground and background location access only during active delivery operations.
+          </p>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Location tracking is required to assign jobs, enable navigation, and track delivery progress.
+          </p>
 
-          <h2>5. Payments & Earnings</h2>
-          <p>Earnings, incentives, and settlements are calculated based on completed deliveries.</p>
-          <p>Payments are processed through third-party payment partners.</p>
-          <p>Skawsh is not responsible for delays caused by banking systems or third-party providers.</p>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">5. Payments & Earnings</h2>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Earnings, incentives, and settlements are calculated based on completed deliveries.
+          </p>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Payments are processed through third-party payment partners.
+          </p>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Skawsh is not responsible for delays caused by banking systems or third-party providers.
+          </p>
 
-          <h2>6. Service Availability</h2>
-          <p>Skawsh does not guarantee continuous or uninterrupted access to the App.</p>
-          <p>Features may be modified, suspended, or discontinued without prior notice.</p>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">6. Service Availability</h2>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Skawsh does not guarantee continuous or uninterrupted access to the App.
+          </p>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            Features may be modified, suspended, or discontinued without prior notice.
+          </p>
 
-          <h2>7. Prohibited Activities</h2>
-          <p>You agree not to:</p>
-          <ul>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">7. Prohibited Activities</h2>
+          <p className="mb-3 md:mb-4 text-sm md:text-base leading-relaxed">You agree not to:</p>
+          <ul className="list-disc pl-4 md:pl-6 mb-4 md:mb-6 space-y-2 text-sm md:text-base">
             <li>Use the App for unlawful, fraudulent, or abusive purposes</li>
             <li>Share false information or impersonate another individual</li>
             <li>Manipulate order status, location data, or payment systems</li>
             <li>Attempt to reverse engineer or misuse the App</li>
           </ul>
 
-          <h2>8. Termination</h2>
-          <p>Skawsh may suspend or terminate your account at any time if:</p>
-          <ul>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">8. Termination</h2>
+          <p className="mb-3 md:mb-4 text-sm md:text-base leading-relaxed">Skawsh may suspend or terminate your account at any time if:</p>
+          <ul className="list-disc pl-4 md:pl-6 mb-4 md:mb-6 space-y-2 text-sm md:text-base">
             <li>You violate these Terms</li>
             <li>You provide false or misleading information</li>
           </ul>
 
-          <h2>9. Limitation of Liability</h2>
-          <p>Skawsh shall not be liable for:</p>
-          <ul>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">9. Limitation of Liability</h2>
+          <p className="mb-3 md:mb-4 text-sm md:text-base leading-relaxed">Skawsh shall not be liable for:</p>
+          <ul className="list-disc pl-4 md:pl-6 mb-4 md:mb-6 space-y-2 text-sm md:text-base">
             <li>Loss of income, profits, or data</li>
             <li>Damages arising from delivery disputes between drivers, customers, or vendors</li>
             <li>Issues caused by third-party services or force majeure events</li>
           </ul>
 
-          <h2>10. Governing Law</h2>
-          <p>These Terms shall be governed by and interpreted in accordance with the laws of India, with jurisdiction in Telangana.</p>
-
-          <h2>11. Contact Information</h2>
-          <p>For questions related to these Terms & Conditions, contact:</p>
-          <p>
-            <strong>Company Name:</strong> Cswishlink Pvt Ltd (Skawsh)<br />
-            <strong>Email:</strong> <a href="mailto:support@skawsh.com">support@skawsh.com</a><br />
-            <strong>Address:</strong> 5-497, NEAR HITEC CITY, IZZATHNAGAR, KONDAPUR, Kondapur, K.V.Rangareddy, Serilingampally, Telangana, India, 500084
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">10. Governing Law</h2>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            These Terms shall be governed by and interpreted in accordance with the laws of India, with jurisdiction in Telangana.
           </p>
-        </article>
-      </main>
 
-      <Footer />
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mt-8 md:mt-12 mb-4 md:mb-6">11. Contact Information</h2>
+          <p className="mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+            For questions related to these Terms & Conditions, contact:
+          </p>
+          <div className="bg-gray-50 p-6 rounded-lg mb-8">
+            <div className="space-y-2 text-gray-700">
+              <p>
+                <strong>Company Name:</strong> Cswishlink Pvt Ltd (Skawsh)
+              </p>
+              <p>
+                <strong>Email:</strong>{" "}
+                <a href="mailto:support@skawsh.com" className="text-skawsh-blue hover:underline">
+                  support@skawsh.com
+                </a>
+              </p>
+              <p>
+                <strong>Address:</strong><br />
+                5-497, NEAR HITEC CITY, IZZATHNAGAR, KONDAPUR,<br />
+                Kondapur, K.V.Rangareddy, Serilingampally,<br />
+                Telangana, India, 500084
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              onClick={handleBackClick}
+              className="bg-skawsh-blue hover:bg-skawsh-blue/90 text-white px-8 py-3"
+            >
+              Back to Previous Page
+            </Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
