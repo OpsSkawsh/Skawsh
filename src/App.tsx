@@ -10,6 +10,9 @@ import Business from "./pages/Business";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import Support from "./pages/Support";
+import Drivers from "./pages/Drivers";
+import DriverPrivacyPolicy from "./pages/DriverPrivacyPolicy";
+import DriverTermsConditions from "./pages/DriverTermsConditions";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +31,9 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/drivers" element={<Drivers />} />
+          <Route path="/drivers/privacy-policy" element={<DriverPrivacyPolicy />} />
+          <Route path="/drivers/terms-conditions" element={<DriverTermsConditions />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

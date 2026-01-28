@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-skawsh-dark text-white py-8 md:py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* Brand */}
           <div>
             <h3 className="text-xl md:text-2xl font-bold text-skawsh-blue mb-3 md:mb-4">Skawsh</h3>
@@ -42,6 +42,28 @@ const Footer = () => {
               <li>
                 <Link to="/support" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base">
                   Support
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Drivers */}
+          <div>
+            <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Drivers</h4>
+            <ul className="space-y-2 md:space-y-3">
+              <li>
+                <Link to="/drivers" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base">
+                  Driver Portal
+                </Link>
+              </li>
+              <li>
+                <Link to="/drivers/privacy-policy" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base">
+                  Driver Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/drivers/terms-conditions" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base">
+                  Driver Terms & Conditions
                 </Link>
               </li>
             </ul>
